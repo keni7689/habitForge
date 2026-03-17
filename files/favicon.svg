@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#0a0a1a"/>
+    </linearGradient>
+    <linearGradient id="flameOuter" x1="30%" y1="0%" x2="70%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff9d00"/>
+      <stop offset="50%" style="stop-color:#ff6b00"/>
+      <stop offset="100%" style="stop-color:#ff3d00"/>
+    </linearGradient>
+    <linearGradient id="flameInner" x1="30%" y1="0%" x2="70%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffdd00"/>
+      <stop offset="100%" style="stop-color:#ff9500"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#7c6aff"/>
+      <stop offset="100%" style="stop-color:#a78bfa"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background rounded rect -->
+  <rect width="512" height="512" rx="112" fill="url(#bgGrad)"/>
+
+  <!-- Subtle purple glow in background -->
+  <ellipse cx="256" cy="300" rx="180" ry="120" fill="#7c6aff" opacity="0.08"/>
+
+  <!-- Outer flame -->
+  <path d="M256 80
+    C256 80 310 140 330 200
+    C345 245 340 270 320 295
+    C305 312 290 320 280 330
+    C295 300 295 275 275 255
+    C265 245 255 240 250 225
+    C245 240 240 260 248 280
+    C235 265 228 245 230 220
+    C215 245 215 275 225 300
+    C210 285 195 260 195 230
+    C185 255 188 285 200 305
+    C185 290 175 265 178 235
+    C165 258 168 295 185 320
+    C168 305 158 280 162 250
+    C148 275 152 315 170 340
+    C155 325 148 295 155 265
+    C138 295 140 335 160 365
+    C148 355 138 330 142 300
+    C125 330 128 370 148 395
+    C168 418 200 432 256 432
+    C312 432 344 418 364 395
+    C384 370 387 330 370 300
+    C374 330 364 355 352 365
+    C372 335 374 295 357 265
+    C364 295 357 325 342 340
+    C362 315 366 275 349 250
+    C353 280 346 305 331 320
+    C348 295 351 258 337 235
+    C337 265 330 290 315 305
+    C327 285 327 255 312 230
+    C314 260 308 280 295 295
+    C285 285 275 270 282 248
+    C290 225 310 195 325 160
+    C330 140 256 80 256 80Z"
+    fill="url(#flameOuter)" filter="url(#glow)" opacity="0.95"/>
+
+  <!-- Inner flame -->
+  <path d="M256 160
+    C256 160 290 205 300 245
+    C308 272 302 292 288 310
+    C278 322 268 330 262 340
+    C272 318 270 298 255 282
+    C248 275 244 268 242 255
+    C239 268 237 285 244 300
+    C234 288 230 270 233 250
+    C224 268 225 292 233 312
+    C222 298 218 275 222 252
+    C212 268 215 298 226 318
+    C218 306 213 285 217 262
+    C208 280 210 310 222 332
+    C212 320 208 295 213 272
+    C228 310 240 340 256 360
+    C272 340 284 310 299 272
+    C304 295 300 320 290 332
+    C302 310 304 280 295 262
+    C299 285 294 306 286 318
+    C297 298 300 268 290 252
+    C294 275 290 298 279 312
+    C287 292 282 268 273 255
+    C271 268 267 275 260 282
+    C245 298 243 318 253 340
+    C247 330 237 322 227 310
+    C213 292 207 272 215 245
+    C225 205 256 160 256 160Z"
+    fill="url(#flameInner)" opacity="0.9"/>
+
+  <!-- Streak streak dot -->
+  <circle cx="256" cy="360" r="28" fill="url(#accentGrad)" opacity="0.9"/>
+  <text x="256" y="369" text-anchor="middle" font-family="Arial Black, sans-serif" font-size="26" font-weight="900" fill="white">∞</text>
+</svg>
